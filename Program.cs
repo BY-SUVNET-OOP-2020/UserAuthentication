@@ -6,7 +6,16 @@ namespace LoginSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            UserAuthentication userAuthentication = new UserAuthentication();
+
+            userAuthentication.AddUser("gustav", "password");
+            userAuthentication.AddUser("jane", "drowssap");
+            userAuthentication.AddUser("sivert", "pwd");
+
+            bool isValidUser = userAuthentication.TryValidateUser("gustav", "password");
+
+            Console.WriteLine("User count: " + User.Count);
+            Console.WriteLine("IsValidUser: " + isValidUser);
         }
     }
 }
