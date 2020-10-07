@@ -11,6 +11,7 @@ namespace LoginSystem
             userAuthentication.AddUser("gustav", "password");
             userAuthentication.AddUser("jane", "drowssap");
             userAuthentication.AddUser("sivert", "pwd");
+            userAuthentication.AddUser("gun", "1234");
 
             bool isValidUser = userAuthentication.TryValidateUser("gustav", "password");
 
